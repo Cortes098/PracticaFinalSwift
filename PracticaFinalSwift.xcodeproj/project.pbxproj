@@ -19,13 +19,15 @@
 		EF2674A12685516A007ECA0D /* LevelOneScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674A02685516A007ECA0D /* LevelOneScene.sks */; };
 		EF2674A326855191007ECA0D /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674A226855191007ECA0D /* EndGameScene.swift */; };
 		EF2674A5268551A0007ECA0D /* EndGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674A4268551A0007ECA0D /* EndGameScene.sks */; };
-		EF2674A7268551F3007ECA0D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674A6268551F3007ECA0D /* Actions.sks */; };
 		EF2674A926855218007ECA0D /* MapTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674A826855218007ECA0D /* MapTileSet.sks */; };
 		EF2674AD26855269007ECA0D /* GameScene+creations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674AC26855269007ECA0D /* GameScene+creations.swift */; };
 		EF2674B02685529F007ECA0D /* GameScene+Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674AF2685529F007ECA0D /* GameScene+Collisions.swift */; };
 		EF2674B2268552B6007ECA0D /* EnemyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674B1268552B6007ECA0D /* EnemyClass.swift */; };
 		EF2674B4268552CF007ECA0D /* extraFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674B3268552CF007ECA0D /* extraFunctions.swift */; };
 		EF2674B6268554B7007ECA0D /* prstart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2674B52685536D007ECA0D /* prstart.ttf */; };
+		EF2674BA26858018007ECA0D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674B926858018007ECA0D /* Actions.sks */; };
+		EF2674BC2686CA18007ECA0D /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2674BB2686CA18007ECA0D /* WinScene.sks */; };
+		EF2674BE2686CA46007ECA0D /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2674BD2686CA46007ECA0D /* WinScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,13 +58,15 @@
 		EF2674A02685516A007ECA0D /* LevelOneScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelOneScene.sks; sourceTree = "<group>"; };
 		EF2674A226855191007ECA0D /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		EF2674A4268551A0007ECA0D /* EndGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndGameScene.sks; sourceTree = "<group>"; };
-		EF2674A6268551F3007ECA0D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = ../../PracticaMobil/BattleCityPractica/BattleCity/Actions.sks; sourceTree = "<group>"; };
 		EF2674A826855218007ECA0D /* MapTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MapTileSet.sks; sourceTree = "<group>"; };
 		EF2674AC26855269007ECA0D /* GameScene+creations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+creations.swift"; sourceTree = "<group>"; };
 		EF2674AF2685529F007ECA0D /* GameScene+Collisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+Collisions.swift"; sourceTree = "<group>"; };
 		EF2674B1268552B6007ECA0D /* EnemyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyClass.swift; sourceTree = "<group>"; };
 		EF2674B3268552CF007ECA0D /* extraFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extraFunctions.swift; sourceTree = "<group>"; };
 		EF2674B52685536D007ECA0D /* prstart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = prstart.ttf; sourceTree = "<group>"; };
+		EF2674B926858018007ECA0D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		EF2674BB2686CA18007ECA0D /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
+		EF2674BD2686CA46007ECA0D /* WinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 			children = (
 				EF2674B52685536D007ECA0D /* prstart.ttf */,
 				EF26748226855099007ECA0D /* AppDelegate.swift */,
+				EF2674B926858018007ECA0D /* Actions.sks */,
 				EF267499268550DC007ECA0D /* Scenes */,
-				EF2674A6268551F3007ECA0D /* Actions.sks */,
 				EF2674A826855218007ECA0D /* MapTileSet.sks */,
 				EF26748C26855099007ECA0D /* Main.storyboard */,
 				EF26748F2685509A007ECA0D /* Assets.xcassets */,
@@ -120,6 +124,8 @@
 				EF2674A02685516A007ECA0D /* LevelOneScene.sks */,
 				EF2674A226855191007ECA0D /* EndGameScene.swift */,
 				EF2674A4268551A0007ECA0D /* EndGameScene.sks */,
+				EF2674BD2686CA46007ECA0D /* WinScene.swift */,
+				EF2674BB2686CA18007ECA0D /* WinScene.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -195,12 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2674A12685516A007ECA0D /* LevelOneScene.sks in Resources */,
+				EF2674BA26858018007ECA0D /* Actions.sks in Resources */,
 				EF2674A5268551A0007ECA0D /* EndGameScene.sks in Resources */,
 				EF267498268550C0007ECA0D /* GameScene.sks in Resources */,
-				EF2674A7268551F3007ECA0D /* Actions.sks in Resources */,
 				EF2674B6268554B7007ECA0D /* prstart.ttf in Resources */,
 				EF26748E26855099007ECA0D /* Main.storyboard in Resources */,
 				EF2674A926855218007ECA0D /* MapTileSet.sks in Resources */,
+				EF2674BC2686CA18007ECA0D /* WinScene.sks in Resources */,
 				EF2674902685509A007ECA0D /* Assets.xcassets in Resources */,
 				EF26749D2685513D007ECA0D /* FirstScreen.sks in Resources */,
 			);
@@ -225,7 +232,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -238,6 +246,7 @@
 				EF26749F2685515A007ECA0D /* LevelOneScene.swift in Sources */,
 				EF26748926855099007ECA0D /* GameScene.swift in Sources */,
 				EF26748B26855099007ECA0D /* GameViewController.swift in Sources */,
+				EF2674BE2686CA46007ECA0D /* WinScene.swift in Sources */,
 				EF2674A326855191007ECA0D /* EndGameScene.swift in Sources */,
 				EF2674AD26855269007ECA0D /* GameScene+creations.swift in Sources */,
 				EF2674B2268552B6007ECA0D /* EnemyClass.swift in Sources */,
