@@ -108,11 +108,15 @@ extension GameScene {
         bullet.physicsBody?.contactTestBitMask = 0x00000100
     }
 
-    func spawnEnemy() {
-        let startPosition = CGPoint(x: CGFloat.random(in: -95..<95), y: 85)
-        let enemy : Enemy = Enemy(startPosition: startPosition)
-        addChild(enemy)
-        allEnemiesArray.append(enemy)
+    func spawnEnemy()
+    {
+        if createdEnemies < maxEnemies
+        {
+            createdEnemies += 1
+            let startPosition = CGPoint(x: CGFloat.random(in: -95..<95), y: 75)
+            let enemy : Enemy! = Enemy(startPosition: startPosition)
+            addChild(enemy)
+        }
     }
 }
 

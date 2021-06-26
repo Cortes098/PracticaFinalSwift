@@ -13,6 +13,13 @@ class GameScene: SKScene {
     enum Direction {
         case NONE, LEFT, RIGHT, UP, DOWN
     }
+    
+    var newScene = SKScene()
+    var transition = SKTransition()
+   
+    
+    
+    var createdEnemies : Int = 0
     let startSound = SKAudioNode(fileNamed: "startSound")
     var leftButton: SKSpriteNode!
     var rightButton: SKSpriteNode!
@@ -24,19 +31,22 @@ class GameScene: SKScene {
     var input: Direction = .RIGHT
 
     var arrayOfAvailableSpots = [CGPoint]()
-    var allEnemiesArray = [Enemy]()
 
     var playerSprite: SKSpriteNode = SKSpriteNode()
     var moveAction: SKAction = SKAction(named: "playerTank")!
     var playerVelocity: Int = 20
-
+    
+    var enemiesKilled : Int = 0
+    let maxEnemies : Int = 10
     override func didMove(to view: SKView) {
+        newScene = SKScene(fileNamed: "EndGameScene")!
+        transition = SKTransition.fade(withDuration: 1)
         addChild(startSound)
         run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run {( self.spawnEnemy() )},
-            SKAction.wait(forDuration: 5)
+            SKAction.wait(forDuration: 15)
             ])))
-
+        newScene.scaleMode = .aspectFill
         backgroundColor = UIColor.init(red: 46/255, green: 46/255, blue: 46/255, alpha: 1)
         initButtons()
 
@@ -52,7 +62,7 @@ class GameScene: SKScene {
         if self.childNode(withName: "Player") != nil {
 
             playerSprite = self.childNode(withName: "Player") as! SKSpriteNode
-            playerSprite.physicsBody = SKPhysicsBody(texture: playerSprite.texture!, size: playerSprite.size)
+            playerSprite.physicsBody = SKPhysicsBody(texture: playerSprite.texture!, size: CGSize(width: 7, height: 7))
             playerSprite.physicsBody?.affectedByGravity = false
             playerSprite.physicsBody?.allowsRotation = false
             playerSprite.physicsBody?.linearDamping = 0

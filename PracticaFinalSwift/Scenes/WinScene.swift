@@ -1,9 +1,8 @@
 import SpriteKit
 import GameplayKit
 // swiftlint:disable force_cast
-class EndGameScene: SKScene {
+class WinScene: SKScene {
     var endSprite: SKSpriteNode = SKSpriteNode()
-    var endAnim: SKAction = SKAction(named: "EndAnimation")!
 
     var toLevelOne: SKScene = SKScene(fileNamed: "LevelOneScene")!
     var transition: SKTransition = SKTransition.fade(withDuration: 1)
@@ -28,7 +27,6 @@ class EndGameScene: SKScene {
         toLevelOne.scaleMode = .aspectFill
         if self.childNode(withName: "EndSprite") != nil {
             endSprite = self.childNode(withName: "EndSprite") as! SKSpriteNode
-            endSprite.run(endAnim)
         }
     }
 

@@ -2,6 +2,8 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
+// swiftlint:disable force_cast
+// swiftlint:disable color
 extension GameScene {
     func setMapPhysics(tileDefiniton: SKTileDefinition, tileSize: CGSize, coX: CGFloat, coY: CGFloat, startingLocation: CGPoint) {
         if tileDefiniton.name == "emptyBrick" {
@@ -85,19 +87,32 @@ extension GameScene {
 
             node.position = CGPoint(x: node.position.x + startingLocation.x, y: node.position.y + startingLocation.y)
         } else if tileDefiniton.name == "end" {
-
+            let endTexture = SKTexture(imageNamed: "end")
+            let node = SKNode()
+            node.position = CGPoint(x: coX, y: coY)
+            node.physicsBody = SKPhysicsBody(texture: endTexture, size: CGSize(width: (endTexture.size().width), height: (endTexture.size().height)) )
+            node.alpha=0
+            node.physicsBody?.linearDamping = 0
+            node.physicsBody?.affectedByGravity = false
+            node.zPosition = 1
+            node.physicsBody?.allowsRotation = false
+            node.physicsBody?.categoryBitMask = 0x00000100
+            node.physicsBody?.collisionBitMask = 0x00000000
+            node.physicsBody?.contactTestBitMask = 0x00000111
+            node.physicsBody?.isDynamic = false
+            node.name = "end"
+            self.addChild(node)
+            node.position = CGPoint(x: node.position.x + startingLocation.x, y: node.position.y + startingLocation.y)
         }
-
     }
-
-    func compareNode(node: SKNode) -> Enemy? {
-        for enemy in allEnemiesArray {
-            if node.position == enemy.position {
-                print("WIIIIIIIIIIIIIIIIIIIIII")
-                return enemy
-            }
-        }
-        return nil
+    func createExplosion(position: CGPoint)
+    {
+        let explosionSprite = SKSpriteNode(imageNamed: "expl5")
+        explosionSprite.position = position
+        addChild(explosionSprite)
+        
+        let explosion: SKAction = SKAction(named: "Explosion")!
+        explosionSprite.run(explosion, completion: {explosionSprite.removeFromParent()})
+        
     }
-
 }
