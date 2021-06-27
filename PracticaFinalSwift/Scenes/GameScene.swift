@@ -12,13 +12,9 @@ class GameScene: SKScene {
     // ***BUTTONS VARIABLES***//
     enum Direction {
         case NONE, LEFT, RIGHT, UP, DOWN
-    }
-    
+    }    
     var newScene = SKScene()
     var transition = SKTransition()
-   
-    
-    
     var createdEnemies : Int = 0
     let startSound = SKAudioNode(fileNamed: "startSound")
     var leftButton: SKSpriteNode!
@@ -41,10 +37,10 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         newScene = SKScene(fileNamed: "EndGameScene")!
         transition = SKTransition.fade(withDuration: 1)
-        addChild(startSound)
+       
         run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run {( self.spawnEnemy() )},
-            SKAction.wait(forDuration: 15)
+            SKAction.wait(forDuration: 5)
             ])))
         newScene.scaleMode = .aspectFill
         backgroundColor = UIColor.init(red: 46/255, green: 46/255, blue: 46/255, alpha: 1)
@@ -71,6 +67,7 @@ class GameScene: SKScene {
         }
 
         self.physicsWorld.contactDelegate = self
+        if startSound.parent == nil{self.addChild(startSound)}        
     }
 
     func touchDown(atPoint pos: CGPoint) {

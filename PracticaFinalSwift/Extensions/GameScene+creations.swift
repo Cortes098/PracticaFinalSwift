@@ -12,7 +12,7 @@ extension GameScene {
         let halfHeight = CGFloat(tileMap.numberOfRows) / 2.0*tileSize.height
 
         let cameraNode = SKCameraNode()
-        cameraNode.position = CGPoint(x: 0, y: -64)
+        cameraNode.position = CGPoint(x: 0, y: -72)
         cameraNode.setScale(0.28)
         self.addChild(cameraNode)
         self.camera = cameraNode
@@ -84,19 +84,19 @@ extension GameScene {
         case .LEFT:
             bullet.zRotation = CGFloat(180 * Double.pi / 180)
             bullet.physicsBody?.velocity = CGVector(dx: -50, dy: 0)
-            bullet.position = CGPoint(x: self.playerSprite.position.x - 15, y: self.playerSprite.position.y)
+            bullet.position = CGPoint(x: self.playerSprite.position.x - 10, y: self.playerSprite.position.y)
         case .RIGHT:
             bullet.zRotation = CGFloat(0 * Double.pi / 180)
             bullet.physicsBody?.velocity = CGVector(dx: 50, dy: 0)
-            bullet.position = CGPoint(x: self.playerSprite.position.x+15, y: self.playerSprite.position.y)
+            bullet.position = CGPoint(x: self.playerSprite.position.x+10, y: self.playerSprite.position.y)
         case .UP:
             bullet.zRotation = CGFloat(90 * Double.pi / 180)
             bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 50)
-            bullet.position = CGPoint(x: self.playerSprite.position.x, y: self.playerSprite.position.y+15)
+            bullet.position = CGPoint(x: self.playerSprite.position.x, y: self.playerSprite.position.y+10)
         case .DOWN:
             bullet.zRotation = CGFloat(270 * Double.pi / 180)
             bullet.physicsBody?.velocity = CGVector(dx: 0, dy: -50)
-            bullet.position = CGPoint(x: self.playerSprite.position.x, y: self.playerSprite.position.y-15)
+            bullet.position = CGPoint(x: self.playerSprite.position.x, y: self.playerSprite.position.y-10)
         }
 
         bullet.zPosition = 1

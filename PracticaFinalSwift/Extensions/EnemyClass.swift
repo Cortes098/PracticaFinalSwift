@@ -85,22 +85,22 @@ extension GameScene {
                 print("LEFT")
                 bullet.zRotation = CGFloat(180 * Double.pi / 180)
                 bullet.physicsBody?.velocity = CGVector(dx: -50, dy: 0)
-                bullet.position = CGPoint(x: enemy.position.x - 15, y: enemy.position.y)
+                bullet.position = CGPoint(x: enemy.position.x - 10, y: enemy.position.y)
             case .RIGHT:
                 print("RIGHT")
                 bullet.zRotation = CGFloat(0 * Double.pi / 180)
                 bullet.physicsBody?.velocity = CGVector(dx: 50, dy: 0)
-                bullet.position = CGPoint(x: enemy.position.x+15, y: enemy.position.y)
+                bullet.position = CGPoint(x: enemy.position.x+10, y: enemy.position.y)
             case .UP:
                 print("UP")
                 bullet.zRotation = CGFloat(90 * Double.pi / 180)
                 bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 50)
-                bullet.position = CGPoint(x: enemy.position.x, y: enemy.position.y+15)
+                bullet.position = CGPoint(x: enemy.position.x, y: enemy.position.y+10)
             case .DOWN:
                 print("DOWN")
                 bullet.zRotation = CGFloat(270 * Double.pi / 180)
                 bullet.physicsBody?.velocity = CGVector(dx: 0, dy: -50)
-                bullet.position = CGPoint(x: enemy.position.x, y: enemy.position.y-15)
+                bullet.position = CGPoint(x: enemy.position.x, y: enemy.position.y-10)
             }
             bullet.physicsBody?.affectedByGravity = false
             bullet.physicsBody?.linearDamping = 0

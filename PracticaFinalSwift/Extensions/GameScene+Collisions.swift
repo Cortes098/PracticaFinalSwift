@@ -70,16 +70,15 @@ extension GameScene: SKPhysicsContactDelegate {
         }
         if oneNodeIsShoot, oneNodeIsEnemy {
             enemiesKilled += 1
-            if nodeA.name == "enemy" {
-                createExplosion(position: nodeA.position)
-                nodeA.removeFromParent()
-                nodeB.removeFromParent()
-            }
-            else {
-                createExplosion(position: nodeB.position)
-                nodeA.removeFromParent()
-                nodeB.removeFromParent()
-            }
+            
+            createExplosion(position: nodeA.position)
+            nodeA.removeFromParent()
+            nodeB.removeFromParent()
+        
+            createExplosion(position: nodeB.position)
+            nodeA.removeFromParent()
+            nodeB.removeFromParent()
+            
             
             if (enemiesKilled >= maxEnemies)
             {
